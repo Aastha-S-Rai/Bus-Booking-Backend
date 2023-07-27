@@ -1,6 +1,6 @@
-import connector from "./dbConnection";
+import connector from "./dbConnection.js";
 
-connector.set("debug" = true)
+connector.set("debug", true)
 
 const userSchema = {
     first_name: {type: String, required: true},
