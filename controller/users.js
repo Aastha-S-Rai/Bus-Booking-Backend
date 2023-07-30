@@ -4,7 +4,7 @@ async function createUser(req, res) {
     const {fname, lname, email, password, confirm_password, dob, phone, userType} = req.body;
     try {
         if(password === confirm_password) {
-            const newuser = await addUser(fname, lname, email, password, dob, parseInt(phone), userType)
+            const newuser = await addUser(fname, lname, email.toLowerCase(), password, dob, parseInt(phone), userType)
             res.json({res: `user with id ${newuser._id} created successful`})
         }
         else {
