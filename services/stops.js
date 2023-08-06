@@ -1,15 +1,20 @@
-import Stop from "../models/stops.js"
+import Stop from "../models/stops.js";
 
 export async function createStop(name) {
-    const newStop = await Stop.create(name);
-    if (newStop) {
-        console.log("Done")
-        return newStop
-    }
-    console.log("There's some issue while creating stop")
+  const newStop = await Stop.create(name);
+  if (newStop) {
+    console.log("Done");
+    return newStop;
+  }
+  console.log("There's some issue while creating stop");
 }
 
 export async function searchStop(filter) {
-    const response = await Stop.readByFilter(filter)
-    return response;
+  const response = await Stop.readByFilter(filter);
+  return response;
+}
+
+export async function getAllLocations() {
+  const response = await Stop.readAllLocations();
+  return response;
 }
