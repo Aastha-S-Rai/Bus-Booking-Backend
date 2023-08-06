@@ -1,7 +1,8 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import userRoutes from "./routes/users.js"
+import userRoutes from "./routes/users.js";
+import stopRoutes from "./routes/stops.js";
 
 const app = express();
 const port = 4000;
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 app.use('/user', userRoutes);
+app.use('/stop', stopRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
