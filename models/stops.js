@@ -16,7 +16,7 @@ async function create(name) {
 }
 
 async function readByFilter(filter) {
-  const res = Stop.find({ name: { $regex: filter, $options: "i" } });
+  const res = Stop.find({name: { "$regex": '^'+filter, "$options": "i" } })
   return res;
 }
 
@@ -24,6 +24,7 @@ async function readAllLocations() {
   const res = Stop.find();
   return res;
 }
+
 
 export default {
   create,
