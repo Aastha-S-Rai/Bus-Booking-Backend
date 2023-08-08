@@ -1,4 +1,4 @@
-import Bus from "../models/buses.js";
+import Bus from "../models/bus.js";
 
 export async function createBus(number, seats, stopId, distance) {
   const newBus = await Bus.create(number, seats, stopId, distance);
@@ -8,3 +8,4 @@ export async function createBus(number, seats, stopId, distance) {
   }
   console.log("There's some issue while creating Bus");
 }
+

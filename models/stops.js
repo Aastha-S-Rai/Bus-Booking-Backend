@@ -30,4 +30,5 @@ export default {
   create,
   readByFilter,
   readAllLocations,
+  Stop
 };

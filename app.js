@@ -3,7 +3,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import userRoutes from "./routes/users.js";
 import stopRoutes from "./routes/stops.js";
-import busRoutes from "./routes/busses.js";
+import busRoutes from "./routes/bus.js";
 
 const app = express();
 const port = 4000;
